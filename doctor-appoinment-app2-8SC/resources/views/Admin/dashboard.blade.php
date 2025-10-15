@@ -1,3 +1,3 @@
 <x-admin-layout>
-    Hola
+    Hola Mundo
 </x-admin-layout>
