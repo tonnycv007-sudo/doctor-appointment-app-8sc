@@ -1,3 +1,3 @@
 <x-admin-layout>
-  Hola Tony
+  Hola Mundo
 </x-admin-layout>
