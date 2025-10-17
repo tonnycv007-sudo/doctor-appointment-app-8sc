@@ -1,31 +1,56 @@
-Practica BackEnd 11/09/2025
--Tener instalado MySQL ya sea en XAMP o de otra forma
--Tener Windows (preferencia)
-Abrir proyecto doctor8sc en visual studio
-Abrir XAMP
-Prender Apache y MYSQL
-Entrar a http://localhost/phpmyadmin/
-Y creamos una nueva base de datos
-nombre: appointment_db8sc
-Entrar en el archivo .env  en la carpeta del proyecto y modificar esto
-DB_CONETION Y DB_DATABASE
-En una terminal poner 
-Php artisan migrate (actualiza las tablas de la BD)
-En myPhPAdmin deben aparecer tablas creadas
-Poner php artisan serve
-Tenemos que registrarnos de nuevo en el servidor de laravel porque al hacer las migraciones se reseteo, debe aparecernos la nueva cuenta
-Abrir la carpeta config y modificar el app.php para cambiar la zona horaria
-En la consola poner esto para cambiar el idioma de la base de datos
-composer require laravel-lang/common
-una vez instalado poner
-php artisan lang:add es
-Se crea una carpeta donde están todas las traducciones
-En el .env le cambiamos a esto
-"APP_LOCALE Y APP_FALLBACK_LOCALE"
-Ir a la carpeta config
-Abrir el archivo jetstream.php y descomentar esto, es para cambiar la foto de perfil
-Features::profilePhotos(),
-         Features::api(),
-Regresar al .env y cambiar esto
-FILESYSTEM_DISK=public
-Ahora en nuestro servidor de laravel al dirigirnos a nuestro perfil nos dejara cambiar la foto y al guardar nos quedara ahí mismo
+#  Backend Project - Doctor8SC  
+
+##  Practice - 09/11/2025  
+
+###  Prerequisites  
+- **MySQL** installed (via **XAMPP** or any other method).  
+- **Windows** operating system (recommended).  
+- **Visual Studio Code** installed.  
+- **Composer** and **PHP** properly configured.  
+
+---
+
+###  Installation Steps  
+
+#### 1️ Start Services in XAMPP  
+1. Open **XAMPP**.  
+2. Start **Apache** and **MySQL** services.  
+3. Go to: [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)  
+
+#### 2️ Create the Database  
+Create a new database with the following name:  
+
+```sql
+appointment_db8sc
+```
+## Laravel Proyect Configuration   
+- Open the doctor8SC project in Visual Studio Code.
+- Inside the .env file, update these values:
+```env
+BD_CONNECTION=mysql
+BD_DATABASE=appointment_db8sc
+```
+# Run Migrations
+In your project terminal, execute:
+```
+php artisan migrate
+```
+This will create all necessary tables in your datebases.
+You can verify them in phpMyAdmin.
+## Start the Larevel Sever 
+Run the local server with:
+```
+php artisan serve
+```
+The open the link displayed in your terminal: Server running on [http://127.0.0.1:8000].
+# Set the Timezone 
+1. Open the following file:
+```
+ config/app.php
+```
+2. Locate the timezone line and update it according to your region, for example:
+```
+'timezone' => 'America/Merida',
+```
+
+
