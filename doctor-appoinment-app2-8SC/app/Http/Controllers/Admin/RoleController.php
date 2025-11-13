@@ -106,7 +106,7 @@ class RoleController extends Controller
         session()->flash('swal',
         [
             'icon' => 'success',
-            'title' => 'Rol Actializado correctamente',
+            'title' => 'Rol Actualizado correctamente',
             'text' => 'El rol ha sido actualizado exitosamente'
         ]);
 
