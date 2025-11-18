@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -19,14 +20,9 @@ class DatabaseSeeder extends Seeder
         //LLamar a RoleSeeder
         $this -> call([
             RoleSeeder::class,
+            UserSeeder::class,
         ]);
 
-        //Crear un usuario de prueba cada vez que se ejecuten migraciones
-
-        User::factory()->create([
-            'name' => 'Tony',
-            'email' => 'tonnycv007@gmail.com',
-            'password' => bcrypt('12345678'),
-        ]);
+        
     }
 }
